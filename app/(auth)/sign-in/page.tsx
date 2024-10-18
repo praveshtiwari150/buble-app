@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {Suspense} from 'react'
+import { SignInForm } from '@/components/auth-comp/SignInForm'
 
-const Signin = () => {
+const Signin = async () => {
+  
   return (
-    <div>
-        SignIn
+    <div className="flex justify-center items-center h-screen">
+      <Suspense>
+        <SignInForm />
+      </Suspense>
     </div>
-  )
+  );
 }
 
 export default Signin
